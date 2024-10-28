@@ -10,8 +10,14 @@ class car {
         System.out.println(wheels);
     }
 
-    public void drive(String cName, int wheels) {
+    public void drive(String carName, int wheels) {
         System.out.println(carName + " " + wheels);
+    }
+}
+
+class newCar extends car {
+    public void drive(String carName) {
+        System.out.println("Your car name is : " + carName);
     }
 }
 
@@ -21,5 +27,8 @@ public class Oops {
         c1.drive(4);
         c1.drive("Volvo");
         c1.drive("Benz", 4);
+
+        newCar c2 = new newCar();
+        c2.drive("Audi");
     }
 }
