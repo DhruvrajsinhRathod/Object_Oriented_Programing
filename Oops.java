@@ -1,34 +1,23 @@
-class car {
-    String carName;
-    int wheels;
+class A {
+    String carName = "Volvo";
+    int wheels = 4;
 
-    public void drive(String carName) {
-        System.out.println(carName);
-    }
-
-    public void drive(int wheels) {
-        System.out.println(wheels);
-    }
-
-    public void drive(String carName, int wheels) {
+    public void carPrinter() {
         System.out.println(carName + " " + wheels);
     }
 }
 
-class newCar extends car {
-    public void drive(String carName) {
-        System.out.println("Your car name is : " + carName);
+class B extends A {
+    public void carPrinterB() {
+        System.out.println(carName + " is new car: " + wheels);
     }
 }
 
 public class Oops {
     public static void main(String[] args) {
-        car c1 = new car();
-        c1.drive(4);
-        c1.drive("Volvo");
-        c1.drive("Benz", 4);
-
-        newCar c2 = new newCar();
-        c2.drive("Audi");
+        A a1 = new A();
+        a1.carPrinter();
+        B b1 = new B();
+        b1.carPrinterB();
     }
 }
